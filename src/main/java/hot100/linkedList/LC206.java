@@ -1,5 +1,7 @@
 package hot100.linkedList;
 
+import static hot100.linkedList.ListNode.printListNode;
+
 public class LC206 {
 
     public static ListNode reverseList(ListNode head) {
@@ -48,14 +50,6 @@ public class LC206 {
 
         ListNode newHead = reverseList(head);
         printListNode(newHead);
-    }
-
-    public static void printListNode(ListNode node) {
-        while (node.next != null) {
-            System.out.print(node.val + "-->");
-            node = node.next;
-        }
-        System.out.println(node.val);
     }
 
 }
