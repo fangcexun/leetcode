@@ -2,12 +2,8 @@ package hot100;
 
 public class TestBook {
     public static void main(String[] args) {
-        System.out.println("yes");
+        boolean[] dp = new boolean[10];
+        System.out.println(dp[2]);
     }
 
-    public class InnerClass {
-        public InnerClass() {
-
-        }
-    }
 }
