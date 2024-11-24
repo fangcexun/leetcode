@@ -14,5 +14,17 @@ public class ListNode {
         }
         System.out.println(node.val);
     }
+
+    public static ListNode generateListNode() {
+        ListNode dummyHead = new ListNode();
+        ListNode current = dummyHead;
+
+        for (int i = 1; i <= 10; i++) {
+            current.next = new ListNode(i);
+            current = current.next;
+        }
+
+        return dummyHead.next;
+    }
 }
 

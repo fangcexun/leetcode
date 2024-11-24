@@ -21,7 +21,7 @@ public class BinaryTree {
         }
     }
 
-    public TreeNode generateTree() {
+    public static TreeNode generateTree() {
         BinaryTree tree = new BinaryTree(); // 创建根节点值为10的二叉树
         TreeNode root = new TreeNode(0);  // 获取根节点
 
