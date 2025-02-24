@@ -8,6 +8,9 @@ public class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
     public static void printListNode(ListNode node) {
+        if (node == null) {
+            return;
+        }
         while (node.next != null) {
             System.out.print(node.val + "-->");
             node = node.next;
@@ -27,19 +30,16 @@ public class ListNode {
         return dummyHead.next;
     }
 
-    public static ListNode generateListNode(int[] nums) {
+    public static ListNode generateList(int[] list) {
         ListNode dummyHead = new ListNode();
         ListNode current = dummyHead;
 
-        for (int i : nums) {
-            current.next = new ListNode(i);
+        for (int num : list) {
+            current.next = new ListNode(num);
             current = current.next;
         }
-        return dummyHead.next;
-    }
 
-    public static ListNode mergeTwoList(ListNode list1, ListNode list2) {
-        return null;
+        return dummyHead.next;
     }
 }
 
