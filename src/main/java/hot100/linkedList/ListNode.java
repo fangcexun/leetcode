@@ -26,5 +26,20 @@ public class ListNode {
 
         return dummyHead.next;
     }
+
+    public static ListNode generateListNode(int[] nums) {
+        ListNode dummyHead = new ListNode();
+        ListNode current = dummyHead;
+
+        for (int i : nums) {
+            current.next = new ListNode(i);
+            current = current.next;
+        }
+        return dummyHead.next;
+    }
+
+    public static ListNode mergeTwoList(ListNode list1, ListNode list2) {
+        return null;
+    }
 }
 
