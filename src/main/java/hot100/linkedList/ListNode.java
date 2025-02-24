@@ -8,6 +8,9 @@ public class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 
     public static void printListNode(ListNode node) {
+        if (node == null) {
+            return;
+        }
         while (node.next != null) {
             System.out.print(node.val + "-->");
             node = node.next;
@@ -21,6 +24,18 @@ public class ListNode {
 
         for (int i = 1; i <= 10; i++) {
             current.next = new ListNode(i);
+            current = current.next;
+        }
+
+        return dummyHead.next;
+    }
+
+    public static ListNode generateList(int[] list) {
+        ListNode dummyHead = new ListNode();
+        ListNode current = dummyHead;
+
+        for (int num : list) {
+            current.next = new ListNode(num);
             current = current.next;
         }
 
